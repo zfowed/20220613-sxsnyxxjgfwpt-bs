@@ -17,6 +17,7 @@
     "element-ui": "^2.15.9",
     "highcharts": "^10.1.0",
     "resize-observer-polyfill": "^1.5.1",
+    "swiper": "^8.2.4",
     "vue": "^2.6.14",
     "vue-router": "^3.5.3"
   },
@@ -26,6 +27,7 @@
     "@vitejs/plugin-legacy": "^1.8.2",
     "@vue/runtime-dom": "^3.2.31",
     "@windicss/plugin-animations": "^1.0.9",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^8.10.0",
     "husky": "^7.0.4",
     "sass": "^1.52.1",

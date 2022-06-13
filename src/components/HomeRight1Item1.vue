@@ -1,5 +1,5 @@
 <template>
-  <HomeRight1Item1>
+  <div>
     <div class="home-title pt-10px pl-30px">
       <img src="@/assets/images/home-right-box-title.png">
     </div>
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-  </HomeRight1Item1>
+  </div>
 </template>
 <script setup lang="ts">
 const progressList = reactive([

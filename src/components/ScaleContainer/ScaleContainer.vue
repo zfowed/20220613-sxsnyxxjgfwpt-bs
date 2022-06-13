@@ -25,9 +25,9 @@ const scaleData = reactive({
 })
 
 const isometric = computed(() => {
-  return scaleData.maxScale - scaleData.minScale > 0.2
   // return false
-  // return true
+  return true
+  return scaleData.maxScale - scaleData.minScale > 0.2
 })
 
 const containerStyle = computed(() => {
