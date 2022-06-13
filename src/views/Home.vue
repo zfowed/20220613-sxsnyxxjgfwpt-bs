@@ -7,13 +7,24 @@
       <HomeMiddle></HomeMiddle>
     </template>
     <template slot="right">
-      <HomeRight1></HomeRight1>
+      <Swiper>
+        <SwiperItem>
+          <HomeRight1></HomeRight1>
+        </SwiperItem>
+        <SwiperItem>
+          <HomeRight2></HomeRight2>
+        </SwiperItem>
+        <SwiperItem>
+          <HomeRight3></HomeRight3>
+        </SwiperItem>
+      </Swiper>
     </template>
 
     <div class="page-bg">
-      <div class="page-bg__inner animate-animated animate-delay-0.3s animate-bounceInDown">
+      <div class="page-bg__xxx"></div>
+      <div class="page-bg__inner animate-animated animate-delay-0.3s animate-fadeIn">
         <video
-          v-if="!loading && blobUrl"
+          v-if="blobUrl"
           class="page-bg__video animate-animated animate-delay-0.3s animate-fadeIn"
           autoplay="true"
           controls="false"
@@ -29,8 +40,9 @@
 </template>
 
 <script setup lang="ts">
-
 import APP_CONFIG from '@/config'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+
 import defaultVideoUrl from '@/assets/videos/background.mp4?url'
 
 const videoUrl = APP_CONFIG.BACKGROUND_VIDEO || defaultVideoUrl
@@ -67,6 +79,14 @@ const load = () => {
   height: 100%;
   transform: translateX(-50%);
   z-index: 1;
+  &__xxx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
   &__inner {
     width: 100%;
     height: 100%;
