@@ -10,7 +10,6 @@ declare module 'vue' {
     HomeLeftItem1: typeof import('./components/HomeLeftItem1.vue')['default']
     HomeLeftItem2: typeof import('./components/HomeLeftItem2.vue')['default']
     HomeLeftItem3: typeof import('./components/HomeLeftItem3.vue')['default']
-    'HomeLeftItem3 copy': typeof import('./components/HomeLeftItem3 copy.vue')['default']
     HomeLeftItem3Highcharts: typeof import('./components/HomeLeftItem3Highcharts.vue')['default']
     HomeMiddle: typeof import('./components/HomeMiddle.vue')['default']
     HomeRight1: typeof import('./components/HomeRight1.vue')['default']

@@ -108,8 +108,8 @@ onUnmounted(() => {
   &::v-deep {
     .swiper-pagination-bullet {
       width: 100px;
-      height: 40px;
-      border-radius: 40px;
+      height: 10px;
+      border-radius: 10px;
       margin: 0 20px;
       background-color: rgba(255, 255, 255, 0.6);
       &.swiper-pagination-bullet-active {
