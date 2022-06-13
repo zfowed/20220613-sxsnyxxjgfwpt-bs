@@ -52,7 +52,17 @@
       </div>
     </div>
     <div class="home-main-bottom">
-      1
+      <div class="px-30px">
+        <img class="w-904px h-136px" src="@/assets/images/middle-bottom-title.png" alt="">
+      </div>
+      <div class="flex">
+        <div class="basis-1">
+          <img class="w-977px h-438px" src="@/assets/images/middle-bottom-l.png" alt="">
+        </div>
+        <div class="basis-1">
+          <img class="w-977px h-438px" src="@/assets/images/middle-bottom-r.png" alt="">
+        </div>
+      </div>
     </div>
   </div>
 </template>

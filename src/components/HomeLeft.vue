@@ -1,6 +1,8 @@
 <template>
   <div class="home-side">
-    
+    <HomeLeftItem1 />
+    <HomeLeftItem2 />
+    <HomeLeftItem3 />
   </div>
 </template>
 
