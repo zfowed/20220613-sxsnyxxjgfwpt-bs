@@ -1,16 +1,16 @@
 <template>
   <div class="layout">
     <div class="layout-left">
-      <slot name="left"></slot>
+      <slot name="left"/>
     </div>
     <div class="layout-middle">
-      <slot name="middle"></slot>
+      <slot name="middle"/>
     </div>
     <div class="layout-right">
-      <slot name="right"></slot>
+      <slot name="right"/>
     </div>
 
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
@@ -49,7 +49,6 @@ import { format } from '@/utils/dayjs'
     display: block;
     width: 2048px;
     height: 2480px;
-    opacity: 0.68;
     border-radius: 20px;
     overflow: auto;
   }
