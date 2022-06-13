@@ -5,9 +5,11 @@
 declare module 'vue' {
   export interface GlobalComponents {
     ContainerLoad: typeof import('./components/ContainerLoad/ContainerLoad.vue')['default']
+    ElProgress: typeof import('element-ui/lib/progress')['default']
     HomeLeft: typeof import('./components/HomeLeft.vue')['default']
     HomeMiddle: typeof import('./components/HomeMiddle.vue')['default']
     HomeRight1: typeof import('./components/HomeRight1.vue')['default']
+    HomeRight1Item1: typeof import('./components/HomeRight1Item1.vue')['default']
     HomeRight2: typeof import('./components/HomeRight2.vue')['default']
     HomeRight3: typeof import('./components/HomeRight3.vue')['default']
     Layout: typeof import('./components/Layout.vue')['default']

@@ -1,26 +1,40 @@
 <template>
   <Layout>
     <template slot="left">
-      <HomeLeft></HomeLeft>
+      <HomeLeft />
     </template>
     <template slot="middle">
-      <HomeMiddle></HomeMiddle>
+      <HomeMiddle />
     </template>
     <template slot="right">
-      <HomeRight1></HomeRight1>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <HomeRight1 />
+          </div>
+          <div class="swiper-slide">
+            <HomeRight2 />
+          </div>
+          <div class="swiper-slide">
+            <HomeRight3 />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </template>
 
     <div class="page-bg">
-      <div class="page-bg__inner animate-animated animate-delay-0.3s animate-bounceInDown">
+      <div class="page-bg__xxx"></div>
+      <div class="page-bg__inner animate-animated animate-delay-0.3s animate-fadeIn">
         <video
-          v-if="!loading && blobUrl"
+          v-if="blobUrl"
           class="page-bg__video animate-animated animate-delay-0.3s animate-fadeIn"
           autoplay="true"
           controls="false"
           loop="true"
           muted="true"
           :src="blobUrl"
-          @load="load"
+          @load="videoLoad"
         />
       </div>
     </div>
@@ -30,13 +44,18 @@
 
 <script setup lang="ts">
 
+import Swiper, { Pagination, Autoplay, } from 'swiper';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import APP_CONFIG from '@/config'
+
 import defaultVideoUrl from '@/assets/videos/background.mp4?url'
 
 const videoUrl = APP_CONFIG.BACKGROUND_VIDEO || defaultVideoUrl
-
 const blobUrl = ref('')
-
 onMounted(() => {
   setTimeout(() => {
     const URL = window.URL || window.webkitURL
@@ -52,13 +71,55 @@ onMounted(() => {
     xhr.send()
   }, 1000)
 })
-
-const load = () => {
+const videoLoad = () => {
   URL.revokeObjectURL && URL.revokeObjectURL(blobUrl.value)
 }
+
+let swiper: Swiper
+onMounted(() => {
+  swiper = new Swiper('.swiper', {
+    modules: [Pagination, Autoplay],
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  })
+})
+onUnmounted(() => {
+  swiper?.destroy()
+})
 </script>
 
 <style lang="scss" scoped>
+.swiper {
+  height: 100%;
+  .swiper-wrapper {
+    height: 100%;
+  }
+  .swiper-slide {
+    height: 100%;
+  }
+  &::v-deep {
+    .swiper-pagination-bullet {
+      width: 100px;
+      height: 40px;
+      border-radius: 40px;
+      margin: 0 20px;
+      background-color: rgba(255, 255, 255, 0.6);
+      &.swiper-pagination-bullet-active {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+
 .page-bg {
   position: absolute;
   top: 0;
@@ -67,6 +128,14 @@ const load = () => {
   height: 100%;
   transform: translateX(-50%);
   z-index: 1;
+  &__xxx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
   &__inner {
     width: 100%;
     height: 100%;
@@ -93,5 +162,4 @@ const load = () => {
     }
   }
 }
-
 </style>
