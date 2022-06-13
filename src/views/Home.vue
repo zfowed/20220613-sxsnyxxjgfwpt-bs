@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout @loaded="handleLoaded">
     <template #left>
       <HomeLeft />
     </template>
@@ -75,7 +75,7 @@ const videoLoad = () => {
 }
 
 let swiper: Swiper
-onMounted(() => {
+const handleLoaded = () => {
   nextTick(() => {
     console.log(1);
     
@@ -93,7 +93,7 @@ onMounted(() => {
       },
     })
   })
-})
+}
 onUnmounted(() => {
   swiper?.destroy()
 })

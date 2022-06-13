@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <template v-else>       
+    <template v-else>
       <div class="layout-header animate-animated animate-delay-0.3s animate-fadeIn">
         <img class="w-4374px h-208px m-auto" src="@/assets/images/layout-header.png" alt="">
       </div>
@@ -40,11 +40,16 @@
 <script setup lang="ts">
 import { format } from '@/utils/dayjs'
 
-const loading = ref(false)
+const emit = defineEmits(['loaded'])
+
+const loading = ref(true)
 onMounted(() => {
   setTimeout(() => {
     loading.value = false
-  }, 2400)
+    nextTick(() => {
+      emit('loaded')
+    })
+  }, 1200)
 })
 </script>
 
