@@ -15,6 +15,7 @@ declare module 'vue' {
     HomeMiddle: typeof import('./components/HomeMiddle.vue')['default']
     HomeRight1: typeof import('./components/HomeRight1.vue')['default']
     HomeRight2: typeof import('./components/HomeRight2.vue')['default']
+    'HomeRight2 copy': typeof import('./components/HomeRight2 copy.vue')['default']
     HomeRight2Item1: typeof import('./components/HomeRight2Item1.vue')['default']
     HomeRight2Item2: typeof import('./components/HomeRight2Item2.vue')['default']
     HomeRight2Item3: typeof import('./components/HomeRight2Item3.vue')['default']

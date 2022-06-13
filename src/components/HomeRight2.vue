@@ -1,23 +1,7 @@
 <template>
   <div class="home-side">
-    <div class="home-title pt-10px pl-30px">
+    <div class="home-title pt-10px pl-30px w-1876px h-228px">
       <img src="@/assets/images/home-right-box-title.png">
-    </div>
-    <div class="h-1/2 flex">
-      <div class="w-1/2">
-        <HomeRight2Item1 />
-      </div>
-      <div class="w-1/2">
-        <HomeRight2Item2 />
-      </div>
-    </div>
-    <div class="h-1/2 flex">
-      <div class="w-1/2">
-        <HomeRight2Item1 />
-      </div>
-      <div class="w-1/2">
-        <HomeRight2Item2 />
-      </div>
     </div>
   </div>
 </template>
