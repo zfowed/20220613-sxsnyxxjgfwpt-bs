@@ -1,12 +1,12 @@
 <template>
   <Layout>
-    <template slot="left">
+    <template #left>
       <HomeLeft />
     </template>
-    <template slot="middle">
+    <template #middle>
       <HomeMiddle />
     </template>
-    <template slot="right">
+    <template #right>
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -19,12 +19,12 @@
             <HomeRight3 />
           </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination" />
       </div>
     </template>
 
     <div class="page-bg">
-      <div class="page-bg__xxx"></div>
+      <div class="page-bg__xxx" />
       <div class="page-bg__inner animate-animated animate-delay-0.3s animate-fadeIn">
         <video
           v-if="blobUrl"
@@ -38,17 +38,16 @@
         />
       </div>
     </div>
-    
   </Layout>
 </template>
 
 <script setup lang="ts">
 
-import Swiper, { Pagination, Autoplay, } from 'swiper';
+import Swiper, { Autoplay, Pagination } from 'swiper'
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 import APP_CONFIG from '@/config'
 
@@ -80,11 +79,11 @@ onMounted(() => {
   swiper = new Swiper('.swiper', {
     modules: [Pagination, Autoplay],
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    //   pauseOnMouseEnter: true,
+    // },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -118,7 +117,6 @@ onUnmounted(() => {
     }
   }
 }
-
 
 .page-bg {
   position: absolute;
