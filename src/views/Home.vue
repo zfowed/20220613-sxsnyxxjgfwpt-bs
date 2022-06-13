@@ -43,11 +43,11 @@
 
 <script setup lang="ts">
 
-import Swiper, { Autoplay, Pagination } from 'swiper'
+import Swiper, { Autoplay, Pagination } from 'swiper';
 // import Swiper and modules styles
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import APP_CONFIG from '@/config'
 
@@ -76,18 +76,22 @@ const videoLoad = () => {
 
 let swiper: Swiper
 onMounted(() => {
-  swiper = new Swiper('.swiper', {
-    modules: [Pagination, Autoplay],
-    loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    //   pauseOnMouseEnter: true,
-    // },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
+  nextTick(() => {
+    console.log(1);
+    
+    swiper = new Swiper('.swiper', {
+      modules: [Pagination, Autoplay],
+      loop: true,
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      //   pauseOnMouseEnter: true,
+      // },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+    })
   })
 })
 onUnmounted(() => {
@@ -107,8 +111,8 @@ onUnmounted(() => {
   &::v-deep {
     .swiper-pagination-bullet {
       width: 100px;
-      height: 40px;
-      border-radius: 40px;
+      height: 10px;
+      border-radius: 10px;
       margin: 0 20px;
       background-color: rgba(255, 255, 255, 0.6);
       &.swiper-pagination-bullet-active {

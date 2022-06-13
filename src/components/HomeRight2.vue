@@ -3,22 +3,6 @@
     <div class="home-title pt-10px pl-30px">
       <img src="@/assets/images/home-right2-title.png">
     </div>
-    <div class="h-1/2 flex">
-      <div class="w-1/2">
-        <HomeRight2Item1 />
-      </div>
-      <div class="w-1/2">
-        <HomeRight2Item2 />
-      </div>
-    </div>
-    <div class="h-1/2 flex">
-      <div class="w-1/2">
-        <HomeRight2Item1 />
-      </div>
-      <div class="w-1/2">
-        <HomeRight2Item2 />
-      </div>
-    </div>
   </div>
 </template>
 
