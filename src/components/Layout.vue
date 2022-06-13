@@ -1,13 +1,20 @@
 <template>
   <div class="layout">
-    <div class="layout-left">
-      <slot name="left" />
+    <div class="layout-header animate-animated animate-delay-1.3s animate-fadeIn">
+      <img class="w-4374px h-208px m-auto" src="@/assets/images/layout-header.png" alt="">
     </div>
-    <div class="layout-middle">
-      <slot name="middle" />
+    <div class="layout-tip animate-animated animate-delay-1.6s animate-fadeIn">
+      <img class="w-4616px h-136px m-auto" src="@/assets/images/layout-tip.png" alt="">
     </div>
-    <div class="layout-right">
-      <slot name="right" />
+
+    <div class="layout-left animate-animated animate-delay-0.3s animate-fadeInLeft">
+      <slot name="left"></slot>
+    </div>
+    <div class="layout-middle animate-animated animate-delay-0.3s animate-fadeIn">
+      <slot name="middle"></slot>
+    </div>
+    <div class="layout-right animate-animated animate-delay-0.3s animate-fadeInRight">
+      <slot name="right"></slot>
     </div>
 
     <slot></slot>
@@ -27,6 +34,36 @@ import { format } from '@/utils/dayjs'
   height: 2976px;
   // background: #061127 url('@/assets/images/layout-bg.png') no-repeat top center;
   background-size: cover;
+
+  .layout-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 208px;
+    img {
+      display: block;
+      margin: auto;
+      max-height: 100%;
+    }
+  }
+
+  .layout-tip {
+    position: absolute;
+    top: 226px;
+    left: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 136px;
+    img {
+      display: block;
+      margin: auto;
+      max-height: 100%;
+    }
+  }
 
   .layout-left {
     position: absolute;

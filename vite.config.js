@@ -28,7 +28,7 @@ const config = defineConfig({
       input: {
         'index': path.resolve(__dirname, 'index.html'),
         'page-3720x1488': path.resolve(__dirname, 'page-3720x1488.html'),
-        'page-3720x1488-original': path.resolve(__dirname, 'page-3720x1488-original.html')
+        'page-3720x1488-original': path.resolve(__dirname, 'page-3720x1488-original.html'),
       },
     },
   },
