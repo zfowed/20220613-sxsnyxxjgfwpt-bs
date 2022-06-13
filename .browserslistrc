@@ -1,0 +1,7 @@
+# Browsers that we support
+
+defaults
+last 2 versions
+> 1%
+ie >= 9
+maintained node versions
