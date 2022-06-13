@@ -52,15 +52,21 @@
       </div>
     </div>
     <div class="home-main-bottom">
-      <div class="px-30px">
+      <div class="px-30px mb-10px">
         <img class="w-904px h-136px" src="@/assets/images/middle-bottom-title.png" alt="">
       </div>
-      <div class="flex">
-        <div class="">
-          <img class="w-977px h-438px" src="@/assets/images/middle-bottom-l.png" alt="">
+      <div class="flex px-40px">
+        <div class="w-1/1">
+          <div class="senior-text mb-10px">
+能源信息资产库
+</div>
+          <img class="w-968px h-444px m-auto" src="@/assets/images/middle-bottom-l.png" alt="">
         </div>
-        <div class="">
-          <img class="w-977px h-438px" src="@/assets/images/middle-bottom-r.png" alt="">
+        <div class="w-1/1">
+          <div class="senior-text w-735px m-auto mb-10px">
+支撑30+应用系统
+</div>
+          <img class="w-735px h-430px m-auto" src="@/assets/images/middle-bottom-r.png" alt="">
         </div>
       </div>
     </div>
@@ -438,6 +444,20 @@ onMounted(() => {
     position: relative;
     top: 0;
     left: 0;
+  }
+}
+
+.senior-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFCE2B;
+  @supports (-webkit-background-clip: text) {
+    font-weight: normal;
+    color: transparent;
+    background: linear-gradient(to bottom, #FFFEB2, #FFCE2B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 </style>

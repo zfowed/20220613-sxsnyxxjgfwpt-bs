@@ -25,10 +25,10 @@
 
     <div class="page-bg">
       <div class="page-bg__xxx"></div>
-      <div class="page-bg__inner animate-animated animate-delay-0.3s animate-fadeIn">
+      <div class="page-bg__inner animate-animated animate-delay-1.6s animate-fadeIn">
         <video
           v-if="blobUrl"
-          class="page-bg__video animate-animated animate-delay-0.3s animate-fadeIn"
+          class="page-bg__video"
           autoplay="true"
           controls="false"
           loop="true"
@@ -139,7 +139,7 @@ onUnmounted(() => {
   &__inner {
     width: 100%;
     height: 100%;
-    // background: url('@/assets/images/background.jpg') no-repeat top left;
+    background: url('@/assets/images/background.jpg') no-repeat top left;
     background-size: 100% 100%;
   }
   &__video {
