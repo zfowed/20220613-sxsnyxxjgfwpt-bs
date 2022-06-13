@@ -9,6 +9,8 @@
     <div class="layout-right">
       <slot name="right"></slot>
     </div>
+
+    <slot></slot>
   </div>
 </template>
 
@@ -30,7 +32,7 @@ import { format } from '@/utils/dayjs'
     position: absolute;
     top: 402px;
     left: 158px;
-    z-index: 1;
+    z-index: 10;
     display: block;
     width: 2510px;
     height: 2480px;
@@ -43,7 +45,7 @@ import { format } from '@/utils/dayjs'
     position: absolute;
     top: 402px;
     left: 2696px;
-    z-index: 1;
+    z-index: 10;
     display: block;
     width: 2048px;
     height: 2480px;
@@ -56,7 +58,7 @@ import { format } from '@/utils/dayjs'
     position: absolute;
     top: 402px;
     right: 158px;
-    z-index: 1;
+    z-index: 10;
     display: block;
     width: 2510px;
     height: 2480px;
