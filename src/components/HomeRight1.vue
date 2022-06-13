@@ -3,7 +3,7 @@
     <div class="home-title pt-10px pl-30px">
       <img src="@/assets/images/home-right1-title.png">
     </div>
-    <div class="h-1/2 flex">
+    <div class="flex h-1225px">
       <div class="w-1/2">
         <HomeRight1Item1 />
       </div>
@@ -11,12 +11,12 @@
         <HomeRight1Item2 />
       </div>
     </div>
-    <div class="h-1/2 flex">
+    <div class="flex h-1225px">
       <div class="w-1/2">
         <HomeRight1Item3 />
       </div>
       <div class="w-1/2">
-        <!-- <HomeRight1Item2 /> -->
+        <HomeRight1Item4 />
       </div>
     </div>
   </div>

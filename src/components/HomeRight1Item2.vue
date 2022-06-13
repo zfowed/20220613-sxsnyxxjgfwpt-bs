@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-      <div class="box2 h-350px ml-40px mr-60px">
+      <div class="box2 h-440px ml-40px mr-60px mt-40px">
         <VueEcharts :option="echartsOption" />
       </div>
     </div>
@@ -221,11 +221,11 @@ onMounted(() => {
 }
 .item1-aside {
   width: 120px;
-  height: 200px;
+  height: 235px;
   align-items: center
 }
 .item1-section {
-  height: 200px;
+  height: 235px;
   flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;
