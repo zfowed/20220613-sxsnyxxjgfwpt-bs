@@ -214,9 +214,8 @@
 </template>
 
 <script setup lang="ts">
-const getBoxItem = (index: string) =>
+const boxItemImg = (index: string) =>
   new URL(`../assets/images/home-left-box1-item-${index}.png`, import.meta.url).href
-const boxItemImg = reactive(getBoxItem)
 </script>
 
 <style lang="scss" scoped>

@@ -1,44 +1,46 @@
 <template>
-  <div v-if="loading" class="container-load">
-    <div class="loading">
-      <div class="hex" />
-      <div class="hex" />
-      <div class="hex" />
-      <div class="hex" />
-      <div class="hex" />
-      <div class="hex" />
-      <div class="hex" />
-      <span>LOADING</span>
+
+  <div class="layout">
+    <div v-if="loading" class="container-load">
+      <div class="loading">
+        <div class="hex" />
+        <div class="hex" />
+        <div class="hex" />
+        <div class="hex" />
+        <div class="hex" />
+        <div class="hex" />
+        <div class="hex" />
+        <span>LOADING</span>
+      </div>
     </div>
+
+    <template v-else>       
+      <div class="layout-header animate-animated animate-delay-0.3s animate-fadeIn">
+        <img class="w-4374px h-208px m-auto" src="@/assets/images/layout-header.png" alt="">
+      </div>
+      <div class="layout-tip animate-animated animate-delay-0.6s animate-fadeIn">
+        <img class="w-4616px h-136px m-auto" src="@/assets/images/layout-tip.png" alt="">
+      </div>
+
+      <div class="layout-left animate-animated animate-delay-1s animate-fadeInLeft">
+        <slot name="left"/>
+      </div>
+      <div class="layout-middle animate-animated animate-delay-1.6s animate-fadeIn">
+        <slot name="middle"/>
+      </div>
+      <div class="layout-right animate-animated animate-delay-1s animate-fadeInRight">
+        <slot name="right"/>
+      </div>
+
+      <slot />
+    </template>
   </div>
-
-  <div v-else class="layout">
-    <div class="layout-header animate-animated animate-delay-0.3s animate-fadeIn">
-      <img class="w-4374px h-208px m-auto" src="@/assets/images/layout-header.png" alt="">
-    </div>
-    <div class="layout-tip animate-animated animate-delay-0.6s animate-fadeIn">
-      <img class="w-4616px h-136px m-auto" src="@/assets/images/layout-tip.png" alt="">
-    </div>
-
-    <div class="layout-left animate-animated animate-delay-1s animate-fadeInLeft">
-      <slot name="left"/>
-    </div>
-    <div class="layout-middle animate-animated animate-delay-1.6s animate-fadeIn">
-      <slot name="middle"/>
-    </div>
-    <div class="layout-right animate-animated animate-delay-1s animate-fadeInRight">
-      <slot name="right"/>
-    </div>
-
-    <slot />
-  </div>
-  
 </template>
 
 <script setup lang="ts">
 import { format } from '@/utils/dayjs'
 
-const loading = ref(true)
+const loading = ref(false)
 onMounted(() => {
   setTimeout(() => {
     loading.value = false
