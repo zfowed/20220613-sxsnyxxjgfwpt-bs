@@ -10,7 +10,7 @@
     <div class="layout-left animate-animated animate-delay-0.3s animate-fadeInLeft">
       <slot name="left"/>
     </div>
-    <div class="layout-middle animate-animated animate-delay-0.3s animate-fadeIn">
+    <div class="layout-middle animate-animated animate-delay-0.6s animate-fadeIn">
       <slot name="middle"/>
     </div>
     <div class="layout-right animate-animated animate-delay-0.3s animate-fadeInRight">
