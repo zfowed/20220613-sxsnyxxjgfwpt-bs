@@ -3,7 +3,7 @@
     <div class="home-title pt-10px pl-30px">
       <img src="@/assets/images/home-right1-title.png">
     </div>
-    <div class="flex h-1225px">
+    <div class="flex">
       <div class="w-1/2">
         <HomeRight1Item1 />
       </div>
@@ -11,7 +11,7 @@
         <HomeRight1Item2 />
       </div>
     </div>
-    <div class="flex h-1225px">
+    <div class="flex mt-80px">
       <div class="w-1/2">
         <HomeRight1Item3 />
       </div>

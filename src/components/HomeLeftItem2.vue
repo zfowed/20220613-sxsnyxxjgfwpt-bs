@@ -1,6 +1,8 @@
 <template>
   <div class="px-60px mb-60px">
-    <div class="senior-text text-48px font-medium mb-30px">企业数据采集</div>
+    <div class="senior-text text-48px font-medium mb-30px">
+      企业数据采集
+    </div>
     <div class="flex">
       <div class="flex-1 h-564px">
         <VueEcharts :option="echarts1Option" />
@@ -120,7 +122,7 @@ const echarts1Option = reactive({
     padding: 20,
     textStyle: {
       fontSize: 26,
-    }
+    },
   },
 })
 onMounted(() => {

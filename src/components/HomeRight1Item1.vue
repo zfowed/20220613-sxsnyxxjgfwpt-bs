@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="box1">
-      <div class="title mt-15px pl-50px">
+      <div class="title mt-15px pl-50px text-48px">
         <span class="text-gradient">为“扩大非化石能源装机规模”举措提供数据支撑</span>
       </div>
-      <div class="sub-title mt-15px pl-50px">
+      <div class="sub-title mt-40px pl-50px text-48px">
         <span>非化石能源发电装机容量占全省发电装机容量</span>
       </div>
-      <div class="progress-list flex flex-wrap mt-15px ml-50px pr-20px h-370px">
+      <div class="progress-list flex flex-wrap mt-25px ml-50px pr-20px h-380px">
         <div
           v-for="(item, index) in progressList"
           :key="index"
@@ -18,7 +18,7 @@
             class="progress-default"
             type="circle"
             :color="item.color ? item.color : 'rgba(36, 252, 255, 0.3)'"
-            :width="85"
+            :width="105"
             :stroke-width="9"
             :percentage="item.progressNum"
             :show-text="false"
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="box2 h-440px ml-40px mr-60px mt-40px">
+    <div class="box2 h-480px ml-40px mr-60px mt-40px">
       <VueEcharts :option="echartsOption" />
     </div>
   </div>
@@ -80,18 +80,22 @@ const echartsOption = reactive({
   legend: {
     top: 0,
     right: 0,
-    itemWidth: 10,
-    itemHeight: 10,
+    itemWidth: 40,
+    itemHeight: 40,
+    itemGap: 10,
     textStyle: {
       color: '#ffffff',
-      fontSize: 20,
+      fontSize: 34,
+      width: 70,
+      padding: [0, 10, 0, 10],
+      backgroundColor: 'rgba(255, 255, 255, 0)',
     },
     data: ['风电', '光电', '水电', '生物'],
   },
   grid: {
-    top: 40,
+    top: 65,
     right: 20,
-    left: 80,
+    left: 100,
     bottom: 30,
   },
   yAxis: [{
@@ -101,12 +105,12 @@ const echartsOption = reactive({
     nameTextStyle: {
       padding: [0, 0, 5, 0],
       color: 'rgba(255, 255, 255, 0.7)',
-      fontSize: 18,
+      fontSize: 26,
     },
     splitNumber: 5,
     axisLabel: {
       textStyle: {
-        fontSize: 18,
+        fontSize: 26,
         color: 'rgba(255, 255, 255, 0.7)',
       },
     },
@@ -134,7 +138,7 @@ const echartsOption = reactive({
         return value.split(' ').join('\n')
       },
       textStyle: {
-        fontSize: 18,
+        fontSize: 26,
         color: 'rgba(255, 255, 255, 0.7)',
       },
     },
@@ -187,6 +191,17 @@ const echartsOption = reactive({
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
+          label: {
+            show: true,
+            position: 'top',
+            formatter(params: any) {
+              return `${params.value}`
+            },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
+          },
           color: {
             type: 'linear',
             x: 0,
@@ -216,6 +231,10 @@ const echartsOption = reactive({
             formatter(params: any) {
               return params.data.name
             },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
           },
         },
       },
@@ -232,7 +251,7 @@ onMounted(() => {
     echartsOption.series[1].data = [223, 800]
     echartsOption.series[2].data = [1309, 1400]
     echartsOption.series[3].data = [1974, 1600]
-    echartsOption.series[4].data = [0, 0, 4300, 5000]
+    echartsOption.series[4].data = [null, null, 4300, 5000]
     echartsOption.series[5].data = [{ value: 160, name: '8%' }, { value: 180, name: '16.21%' }]
   }, 0)
 })

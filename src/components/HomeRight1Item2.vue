@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="box1">
-      <div class="title mt-15px pl-50px">
+      <div class="title mt-15px pl-50px text-48px">
         <span class="text-gradient">为“扩大非化石能源发电量占比”举措提供数据支撑</span>
       </div>
-      <div class="sub-title mt-15px pl-50px">
+      <div class="sub-title mt-40px pl-50px text-48px mb-40px">
         <span>非化石能源发电量比重 </span>
       </div>
       <div style="padding: 25px 55px">
@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-      <div class="box2 h-440px ml-40px mr-60px mt-40px">
+      <div class="box2 h-450px ml-40px mr-60px mt-40px">
         <VueEcharts :option="echartsOption" />
       </div>
     </div>
@@ -91,19 +91,23 @@ const echartsOption = reactive({
   legend: {
     top: 0,
     right: 0,
-    itemWidth: 10,
-    itemHeight: 10,
+    itemWidth: 40,
+    itemHeight: 40,
+    itemGap: 10,
     textStyle: {
       color: '#ffffff',
-      fontSize: 20,
+      fontSize: 34,
+      width: 70,
+      padding: [0, 10, 0, 10],
+      backgroundColor: 'rgba(255, 255, 255, 0)',
     },
     data: ['化石能源', '非化石能源'],
   },
   color: ['#0495ED', '#30D196'],
   grid: {
-    top: 40,
+    top: 65,
     right: 20,
-    left: 80,
+    left: 100,
     bottom: 30,
   },
   yAxis: [{
@@ -113,12 +117,12 @@ const echartsOption = reactive({
     nameTextStyle: {
       padding: [0, 0, 5, 0],
       color: 'rgba(255, 255, 255, 0.7)',
-      fontSize: 20,
+      fontSize: 26,
     },
     splitNumber: 5,
     axisLabel: {
       textStyle: {
-        fontSize: 18,
+        fontSize: 26,
         color: 'rgba(255, 255, 255, 0.7)',
       },
     },
@@ -146,7 +150,7 @@ const echartsOption = reactive({
         return value.split(' ').join('\n')
       },
       textStyle: {
-        fontSize: 18,
+        fontSize: 26,
         color: 'rgba(255, 255, 255, 0.7)',
       },
     },
@@ -188,6 +192,10 @@ const echartsOption = reactive({
             formatter(params: any) {
               return params.data.name
             },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
           },
         },
       },
@@ -221,11 +229,11 @@ onMounted(() => {
 }
 .item1-aside {
   width: 120px;
-  height: 235px;
+  height: 245px;
   align-items: center
 }
 .item1-section {
-  height: 235px;
+  height: 245px;
   flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;

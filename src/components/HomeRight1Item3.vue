@@ -1,17 +1,17 @@
 <template>
   <div>
     <div class="box1">
-      <div class="title mt-15px pl-50px">
+      <div class="title mt-15px pl-50px text-48px">
         <span class="text-gradient">为“推进非常规天然气增储上产”举措提供数据支撑</span>
       </div>
-      <div class="sub-title mt-15px pl-50px">
+      <div class="sub-title mt-45px pl-50px">
         <span />
       </div>
-      <div class="flex flex-wrap mt-15px ml-50px pr-20px h-425px">
+      <div class="flex flex-wrap mt-15px ml-50px pr-20px h-455px">
         <VueEcharts :option="echartsOption" />
       </div>
     </div>
-    <div class="box2 h-440px ml-40px mr-60px mt-40px">
+    <div class="box2 h-470px ml-40px mr-60px mt-65px">
       <VueEcharts :option="echarts1Option" />
     </div>
   </div>
@@ -23,13 +23,13 @@ const echartsOption = reactive({
     left: 'center',
     textStyle: {
       color: '#fff',
-      fontSize: 22,
+      fontSize: 26,
     },
   },
   grid: {
-    top: 40,
+    top: 65,
     right: 20,
-    left: 80,
+    left: 100,
     bottom: 30,
   },
   yAxis: [{
@@ -39,12 +39,12 @@ const echartsOption = reactive({
     nameTextStyle: {
       padding: [0, 0, 5, 0],
       color: 'rgba(255, 255, 255, 0.7)',
-      fontSize: 18,
+      fontSize: 26,
     },
     splitNumber: 5,
     axisLabel: {
       textStyle: {
-        fontSize: 18,
+        fontSize: 26,
         color: 'rgba(255, 255, 255, 0.7)',
       },
     },
@@ -72,7 +72,7 @@ const echartsOption = reactive({
         return value.split(' ').join('\n')
       },
       textStyle: {
-        fontSize: 18,
+        fontSize: 26,
         color: 'rgba(255, 255, 255, 0.7)',
       },
     },
@@ -176,7 +176,7 @@ const echartsOption = reactive({
               return `${params.value}`
             },
             textStyle: {
-              fontSize: 20,
+              fontSize: 26,
               color: 'rgba(255, 255, 255, 0.7)',
             },
           },
@@ -212,7 +212,7 @@ const echartsOption = reactive({
               return `${params.value}`
             },
             textStyle: {
-              fontSize: 20,
+              fontSize: 26,
               color: 'rgba(255, 255, 255, 0.7)',
             },
           },
@@ -244,7 +244,7 @@ const echartsOption = reactive({
           return `${params.name}`
         },
         textStyle: {
-          fontSize: 20,
+          fontSize: 26,
           color: 'rgba(255, 255, 255, 0.7)',
         },
       },
@@ -270,13 +270,13 @@ const echarts1Option = reactive({
     left: 'center',
     textStyle: {
       color: '#fff',
-      fontSize: 22,
+      fontSize: 26,
     },
   },
   grid: {
-    top: 40,
+    top: 65,
     right: 20,
-    left: 80,
+    left: 100,
     bottom: 30,
   },
   yAxis: [{
@@ -286,12 +286,12 @@ const echarts1Option = reactive({
     nameTextStyle: {
       padding: [0, 0, 5, 0],
       color: 'rgba(255, 255, 255, 0.7)',
-      fontSize: 18,
+      fontSize: 26,
     },
     splitNumber: 5,
     axisLabel: {
       textStyle: {
-        fontSize: 18,
+        fontSize: 26,
         color: 'rgba(255, 255, 255, 0.7)',
       },
     },
@@ -319,7 +319,7 @@ const echarts1Option = reactive({
         return value.split(' ').join('\n')
       },
       textStyle: {
-        fontSize: 18,
+        fontSize: 26,
         color: 'rgba(255, 255, 255, 0.7)',
       },
     },
@@ -350,7 +350,7 @@ const echarts1Option = reactive({
               return `${params.value}`
             },
             textStyle: {
-              fontSize: 20,
+              fontSize: 26,
               color: 'rgba(255, 255, 255, 0.7)',
             },
           },
@@ -386,7 +386,7 @@ const echarts1Option = reactive({
               return `${params.value}`
             },
             textStyle: {
-              fontSize: 20,
+              fontSize: 26,
               color: 'rgba(255, 255, 255, 0.7)',
             },
           },
@@ -422,7 +422,7 @@ const echarts1Option = reactive({
               return `${params.value}`
             },
             textStyle: {
-              fontSize: 20,
+              fontSize: 26,
               color: 'rgba(255, 255, 255, 0.7)',
             },
           },
@@ -458,7 +458,7 @@ const echarts1Option = reactive({
               return `${params.value}`
             },
             textStyle: {
-              fontSize: 20,
+              fontSize: 26,
               color: 'rgba(255, 255, 255, 0.7)',
             },
           },
@@ -490,7 +490,7 @@ const echarts1Option = reactive({
           return `${params.name}`
         },
         textStyle: {
-          fontSize: 20,
+          fontSize: 26,
           color: 'rgba(255, 255, 255, 0.7)',
         },
       },
