@@ -26,7 +26,7 @@ onMounted(() => {
   nextTick(() => {
     if (!echartElement.value) return
     echartInstance = echarts.init(echartElement.value, undefined, {
-      devicePixelRatio: window.devicePixelRatio * 4, // 设备像素比
+      devicePixelRatio: window.devicePixelRatio * 2, // 设备像素比
       renderer: 'svg', // 渲染器
       useDirtyRect: false, // 脏矩形渲染
       locale: 'ZH',
