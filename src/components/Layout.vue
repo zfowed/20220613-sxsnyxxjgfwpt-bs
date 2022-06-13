@@ -1,19 +1,19 @@
 <template>
   <div class="layout">
-    <div class="layout-header animate-delay-0.3s animate-fadeIn">
+    <div class="layout-header animate-animated animate-delay-1.3s animate-fadeIn">
       <img class="w-4374px h-208px m-auto" src="@/assets/images/layout-header.png" alt="">
     </div>
-    <div class="layout-tip animate-delay-0.3s animate-fadeIn">
+    <div class="layout-tip animate-animated animate-delay-1.6s animate-fadeIn">
       <img class="w-4616px h-136px m-auto" src="@/assets/images/layout-tip.png" alt="">
     </div>
 
-    <div class="layout-left animate-delay-0.3s animate-fadeIn">
+    <div class="layout-left animate-animated animate-delay-0.3s animate-fadeInLeft">
       <slot name="left"></slot>
     </div>
-    <div class="layout-middle animate-delay-0.3s animate-fadeIn">
+    <div class="layout-middle animate-animated animate-delay-0.3s animate-fadeIn">
       <slot name="middle"></slot>
     </div>
-    <div class="layout-right animate-delay-0.3s animate-fadeIn">
+    <div class="layout-right animate-animated animate-delay-0.3s animate-fadeInRight">
       <slot name="right"></slot>
     </div>
 

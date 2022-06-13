@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 
-import Swiper, { Navigation, Pagination, Autoplay, } from 'swiper';
+import Swiper, { Pagination, Autoplay, } from 'swiper';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -78,7 +78,7 @@ const videoLoad = () => {
 let swiper: Swiper
 onMounted(() => {
   swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination, Autoplay],
+    modules: [Pagination, Autoplay],
     loop: true,
     autoplay: {
       delay: 5000,
