@@ -48,6 +48,7 @@ provide('pageSize', size)
   &__view {
     width: 100%;
     height: 100%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   }
 }
 </style>
