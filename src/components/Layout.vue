@@ -65,7 +65,7 @@ import { format } from '@/utils/dayjs'
     }
   }
 
-  .layout-right {
+  .layout-left {
     position: absolute;
     top: 402px;
     left: 158px;
@@ -91,7 +91,7 @@ import { format } from '@/utils/dayjs'
     overflow: auto;
   }
 
-  .layout-left {
+  .layout-right {
     position: absolute;
     top: 402px;
     right: 158px;
