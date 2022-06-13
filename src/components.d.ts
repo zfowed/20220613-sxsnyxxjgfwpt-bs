@@ -5,16 +5,12 @@
 declare module 'vue' {
   export interface GlobalComponents {
     ContainerLoad: typeof import('./components/ContainerLoad/ContainerLoad.vue')['default']
+    ElProgress: typeof import('element-ui/lib/progress')['default']
     HomeLeft: typeof import('./components/HomeLeft.vue')['default']
-    'HomeLeft copy': typeof import('./components/HomeLeft copy.vue')['default']
     HomeMiddle: typeof import('./components/HomeMiddle.vue')['default']
-    'HomeMiddle copy': typeof import('./components/HomeMiddle copy.vue')['default']
-    HomeRight: typeof import('./components/HomeRight.vue')['default']
-    'HomeRight copy': typeof import('./components/HomeRight copy.vue')['default']
     HomeRight1: typeof import('./components/HomeRight1.vue')['default']
-    'HomeRight1 copy': typeof import('./components/HomeRight1 copy.vue')['default']
+    HomeRight1Item1: typeof import('./components/HomeRight1Item1.vue')['default']
     HomeRight2: typeof import('./components/HomeRight2.vue')['default']
-    'HomeRight2 copy': typeof import('./components/HomeRight2 copy.vue')['default']
     HomeRight3: typeof import('./components/HomeRight3.vue')['default']
     Layout: typeof import('./components/Layout.vue')['default']
     ScaleContainer: typeof import('./components/ScaleContainer/ScaleContainer.vue')['default']

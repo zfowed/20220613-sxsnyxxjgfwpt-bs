@@ -1,13 +1,13 @@
 <template>
   <div class="layout">
     <div class="layout-left">
-      <slot name="left"></slot>
+      <slot name="left" />
     </div>
     <div class="layout-middle">
-      <slot name="middle"></slot>
+      <slot name="middle" />
     </div>
     <div class="layout-right">
-      <slot name="right"></slot>
+      <slot name="right" />
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ import { format } from '@/utils/dayjs'
   // background: #061127 url('@/assets/images/layout-bg.png') no-repeat top center;
   background-size: cover;
 
-  .layout-right {
+  .layout-left {
     position: absolute;
     top: 402px;
     left: 158px;
@@ -52,7 +52,7 @@ import { format } from '@/utils/dayjs'
     overflow: auto;
   }
 
-  .layout-left {
+  .layout-right {
     position: absolute;
     top: 402px;
     right: 158px;
