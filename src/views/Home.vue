@@ -24,13 +24,8 @@
     </template>
 
     <div class="page-bg">
-<<<<<<< HEAD
       <div class="page-bg__xxx" />
-      <div class="page-bg__inner animate-animated animate-delay-0.3s animate-fadeIn">
-=======
-      <div class="page-bg__xxx"></div>
       <div class="page-bg__inner animate-animated animate-delay-1.6s animate-fadeIn">
->>>>>>> 61c193dd88df537a25af1a25d1661d67a3d182c4
         <video
           v-if="blobUrl"
           class="page-bg__video"
