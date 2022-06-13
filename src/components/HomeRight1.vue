@@ -1,9 +1,5 @@
 <template>
-  <div class="home-side">
-    <div class="w-1/2">
-      <HomeRight1Item1 />
-    </div>
-  </div>
+  <div class="home-side" />
 </template>
 
 <script setup lang="ts">

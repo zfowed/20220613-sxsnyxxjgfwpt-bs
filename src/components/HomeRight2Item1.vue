@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="home-title pt-10px pl-30px">
-      <img src="@/assets/images/home-right-box-title.png">
-    </div>
     <div class="box1">
       <div class="title mt-15px pl-50px">
         <span class="text-gradient">为“扩大非化石能源消费比重”举措提供数据支撑</span>
@@ -36,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="box2 h-140px">
+    <div class="box2 h-241px" style="width: 75%;">
       <VueEcharts :option="echartsOption" />
     </div>
   </div>
@@ -80,7 +77,7 @@ const progressList = reactive([
 
 const echartsOption = reactive({
   title: {
-    text: '新能源汽车保有量',
+    text: '消费比重',
     subtext: '',
     x: 'center',
     textStyle: {
@@ -90,10 +87,10 @@ const echartsOption = reactive({
     },
   },
   grid: {
-    top: 20,
+    top: 30,
     left: 60,
     right: 10,
-    bottom: 20,
+    bottom: 30,
   },
   xAxis: {
     type: 'category',
@@ -110,9 +107,8 @@ const echartsOption = reactive({
     },
   },
   yAxis: [{
-    name: '单位：万桶',
+    name: '单位：%',
     nameTextStyle: {
-      padding: [0, 0, -10, 600],
       color: 'rgba(255, 255, 255, 0.7)',
       fontSize: 12,
     },
@@ -130,12 +126,16 @@ const echartsOption = reactive({
       show: false,
     },
     splitNumber: 3,
+    min: 0,
+    max: 10,
   },
   {
     type: 'value',
     alignTicks: true,
     show: false,
     splitNumber: 3,
+    min: 0,
+    max: 25,
   }],
   tooltip: {
     trigger: 'axis',
@@ -146,11 +146,11 @@ const echartsOption = reactive({
       stack: 'bar',
       yAxisIndex: 0,
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 25,
+      barWidth: 35,
       colorBy: 'data',
       itemStyle: {
         normal: {
-          barBorderRadius: [10, 10, 0, 0],
+          barBorderRadius: [20, 20, 0, 0],
           color: {
             type: 'linear',
             x: 0,
@@ -191,7 +191,7 @@ onMounted(() => {
   setTimeout(() => {
     echartsOption.xAxis.data = ['2020', '2021', '2022', '2023', '2024', '2025']
     echartsOption.series[0].data = [6, 8]
-    echartsOption.series[1].data = [{ value: 91.0, name: '6.54%' }, { value: 38.0, name: '7.76%' }]
+    echartsOption.series[1].data = [{ value: 14.0, name: '6.54%' }, { value: 18.0, name: '7.76%' }]
   }, 0)
 })
 
