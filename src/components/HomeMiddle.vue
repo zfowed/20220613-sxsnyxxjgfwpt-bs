@@ -57,7 +57,6 @@
       </div>
       <div class="flex">
         <div class="">
-          
           <img class="w-977px h-438px" src="@/assets/images/middle-bottom-l.png" alt="">
         </div>
         <div class="">
