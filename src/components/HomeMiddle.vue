@@ -57,11 +57,15 @@
       </div>
       <div class="flex px-40px">
         <div class="w-1/1">
-          <div class="senior-text mb-10px">能源信息资产库</div>
+          <div class="senior-text mb-10px">
+能源信息资产库
+</div>
           <img class="w-968px h-444px m-auto" src="@/assets/images/middle-bottom-l.png" alt="">
         </div>
         <div class="w-1/1">
-          <div class="senior-text w-735px m-auto mb-10px">支撑30+应用系统</div>
+          <div class="senior-text w-735px m-auto mb-10px">
+支撑30+应用系统
+</div>
           <img class="w-735px h-430px m-auto" src="@/assets/images/middle-bottom-r.png" alt="">
         </div>
       </div>
