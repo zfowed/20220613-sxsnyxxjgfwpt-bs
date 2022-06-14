@@ -168,9 +168,9 @@ const echartsOption = reactive({
         normal: {
           label: {
             show: true,
-            position: 'top',
+
             formatter(params: any) {
-              return `${params.value}`
+              return `${params.name}`
             },
             textStyle: {
               fontSize: 26,
@@ -190,9 +190,9 @@ const echartsOption = reactive({
         normal: {
           label: {
             show: true,
-            position: 'top',
+
             formatter(params: any) {
-              return `${params.value}`
+              return `${params.name}`
             },
             textStyle: {
               fontSize: 26,
@@ -212,9 +212,9 @@ const echartsOption = reactive({
         normal: {
           label: {
             show: true,
-            position: 'top',
+
             formatter(params: any) {
-              return `${params.value}`
+              return `${params.name}`
             },
             textStyle: {
               fontSize: 26,
@@ -234,9 +234,9 @@ const echartsOption = reactive({
         normal: {
           label: {
             show: true,
-            position: 'top',
+
             formatter(params: any) {
-              return `${params.value}`
+              return `${params.name}`
             },
             textStyle: {
               fontSize: 26,
@@ -256,7 +256,7 @@ const echartsOption = reactive({
         normal: {
           barBorderRadius: [50, 50, 0, 0],
           formatter(params: any) {
-            return `${params.value}`
+            return `${params.name}`
           },
           label: {
             show: true,
@@ -315,10 +315,10 @@ const echartsOption = reactive({
 onMounted(() => {
   setTimeout(() => {
     echartsOption.xAxis.data = ['2020', '2021', '2022', '2023', '2024', '2025']
-    echartsOption.series[0].data = [450, 500]
-    echartsOption.series[1].data = [600, 700]
-    echartsOption.series[2].data = [1309, 1400]
-    echartsOption.series[3].data = [1274, 1400]
+    echartsOption.series[0].data = [{ value: 450, name: '64' }, { value: 450, name: '150' }]
+    echartsOption.series[1].data = [{ value: 600, name: '223' }, { value: 700, name: '800' }]
+    echartsOption.series[2].data = [{ value: 1309, name: '1309' }, { value: 1400, name: '1400' }]
+    echartsOption.series[3].data = [{ value: 1274, name: '1974' }, { value: 1400, name: '1600' }]
     echartsOption.series[4].data = [null, null, 4300, 5000]
     echartsOption.series[5].data = [{ value: 160, name: '' }, { value: 180, name: '6.7%' }]
   }, 0)
