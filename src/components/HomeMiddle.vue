@@ -55,18 +55,18 @@
       <div class="px-30px mb-10px">
         <img class="w-904px h-136px" src="@/assets/images/middle-bottom-title.png" alt="">
       </div>
-      <div class="flex px-40px">
-        <div class="w-1/1">
+      <div class="flex px-40px w-1/1">
+        <div class="flex-1">
           <div class="senior-text mb-10px">
-能源信息资产库
-</div>
+            能源信息资产库
+          </div>
           <img class="w-968px h-444px m-auto" src="@/assets/images/middle-bottom-l.png" alt="">
         </div>
-        <div class="w-1/1">
-          <div class="senior-text w-735px m-auto mb-10px">
-支撑30+应用系统
-</div>
-          <img class="w-735px h-430px m-auto" src="@/assets/images/middle-bottom-r.png" alt="">
+        <div class="flex-1">
+          <div class="senior-text max-w-735px m-auto mb-10px">
+            支撑30+应用系统
+          </div>
+          <img class="max-w-735px h-430px m-auto" src="@/assets/images/middle-bottom-r.png" alt="">
         </div>
       </div>
     </div>
@@ -336,7 +336,7 @@ onMounted(() => {
 .home-main {
   display: flex;
   flex-direction: column;
-  width: 2048px;
+  width: 100%;
   height: 2480px;
   &-top {
     flex: 1;

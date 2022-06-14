@@ -10,13 +10,13 @@
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <HomeRight1 />
+            <HomeRight1 :active="swiperActive" />
           </div>
           <div class="swiper-slide">
-            <HomeRight2 />
+            <HomeRight2 :active="swiperActive" />
           </div>
           <div class="swiper-slide">
-            <HomeRight3 />
+            <HomeRight3 :active="swiperActive" />
           </div>
         </div>
         <div class="swiper-pagination" />
@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 
-import Swiper, { Autoplay, Pagination } from 'swiper'
+import Swiper, { Autoplay, EffectFade, Pagination } from 'swiper'
 // import Swiper and modules styles
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -75,21 +75,32 @@ const videoLoad = () => {
 }
 
 let swiper: Swiper
+const swiperActive = ref(1)
 const handleLoaded = () => {
   nextTick(() => {
-    console.log(1)
-
     swiper = new Swiper('.swiper', {
-      modules: [Pagination, Autoplay],
-      loop: true,
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      //   pauseOnMouseEnter: true,
-      // },
+      modules: [Pagination, EffectFade, Autoplay],
+      // loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
+        clickable: true,
+      },
+      // effect: 'fade',
+      // fadeEffect: {
+      //   crossFade: true,
+      // },
+      observer: true,
+      observeParents: true,
+      on: {
+        slideChange(aaa) {
+          swiperActive.value = aaa.realIndex + 1
+        },
       },
     })
   })

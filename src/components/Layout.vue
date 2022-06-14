@@ -1,5 +1,4 @@
 <template>
-
   <div class="layout">
     <div v-if="loading" class="container-load">
       <div class="loading">
@@ -23,13 +22,13 @@
       </div>
 
       <div class="layout-left animate-animated animate-delay-1s animate-fadeInLeft">
-        <slot name="left"/>
+        <slot name="left" />
       </div>
       <div class="layout-middle animate-animated animate-delay-1.6s animate-fadeIn">
-        <slot name="middle"/>
+        <slot name="middle" />
       </div>
       <div class="layout-right animate-animated animate-delay-1s animate-fadeInRight">
-        <slot name="right"/>
+        <slot name="right" />
       </div>
 
       <slot />
@@ -111,6 +110,7 @@ onMounted(() => {
     z-index: 10;
     display: block;
     width: 2048px;
+    width: 1830px;
     height: 2480px;
     border-radius: 20px;
     overflow: auto;
@@ -122,14 +122,13 @@ onMounted(() => {
     right: 158px;
     z-index: 10;
     display: block;
-    width: 2510px;
+    // width: 2510px;
+    width: 2726px;
     height: 2480px;
     opacity: 0.68;
     border-radius: 20px;
   }
 }
-
-
 
 .container-load {
   position: relative;
