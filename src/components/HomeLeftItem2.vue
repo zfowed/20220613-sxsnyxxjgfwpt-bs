@@ -165,7 +165,7 @@ const echarts2Option = reactive({
       type: 'pie',
       center: ['35%', '50%'],
       radius: ['50%', '80%'],
-      avoidLabelOverlap: false,
+      avoidLabelOverlap: true,
       itemStyle: {
         borderWidth: 2,
         label: { show: true, formatter: '{b}' },
