@@ -41,7 +41,7 @@
             </div>
             <div class="desc absolute flex w-160px top-65px left-630px text-cyan-gradient">
               <div class="value">
-                <TweenNumber :value="500" />
+                <TweenNumber :value="1000" />
               </div>
               <div class="label">
                 TB
@@ -52,7 +52,7 @@
             <div class="text-cell">
               <div class="desc flex w-160px text-cyan-gradient">
                 <div class="value">
-                  <TweenNumber :value="500" />
+                  <TweenNumber :value="200" />
                 </div>
                 <div class="label">
                   TB
@@ -65,7 +65,7 @@
             <div class="text-cell">
               <div class="desc flex w-160px text-cyan-gradient">
                 <div class="value">
-                  <TweenNumber :value="500" />
+                  <TweenNumber :value="300" />
                 </div>
                 <div class="label">
                   TB
