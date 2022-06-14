@@ -305,39 +305,32 @@ const echartsOption = reactive({
     },
   ],
   tooltip: {
-    trigger: 'item',
+    trigger: 'axis',
     padding: 20,
     textStyle: {
       fontSize: 26,
     },
-    // formatter(params) {
-    //   // const list = []
-    //   // for (const key in params) {
-    //   //   if (params[key].data && !params[key].data.show)
-    //   //     list.push(params[key])
-    //   // }
-    //   // console.log(list)
-    //   // return list.map((item, index) => {
-    //   //   if (!item.data.show)
-    //   const list = params.map((param, index) => {
-    //     for (const key in param) {
+    formatter(params) {
+      let tempList = []
+      if (params.length > 4)
+        tempList = params.splice(0, 4)
+      else
+        tempList = params
 
-    //     }
-    //   })
-    //   // console.log(list)
-    //   //   // return ``
-    //   // })
-    // },
+      return tempList.map((item) => {
+        return `${item.marker} ${item.seriesName}: ${item.value}`
+      }).join('<br>')
+    },
   },
 })
 onMounted(() => {
   setTimeout(() => {
     echartsOption.xAxis.data = ['2020', '2021', '2022', '2023', '2024', '2025']
-    echartsOption.series[0].data = [{ value: 450, name: '64', show: true }, { value: 450, name: '150', show: true }]
-    echartsOption.series[1].data = [{ value: 600, name: '223', show: true }, { value: 700, name: '800', show: true }]
-    echartsOption.series[2].data = [{ value: 1309, name: '1309', show: true }, { value: 1400, name: '1400', show: true }]
-    echartsOption.series[3].data = [{ value: 1274, name: '1974', show: true }, { value: 1400, name: '1600', show: true }]
-    echartsOption.series[4].data = [null, null, { value: 4300, name: '4300' }, { value: 5000, name: '5000' }]
+    echartsOption.series[0].data = [{ value: 450, name: '64' }, { value: 450, name: '150' }]
+    echartsOption.series[1].data = [{ value: 600, name: '223' }, { value: 700, name: '800' }]
+    echartsOption.series[2].data = [{ value: 1309, name: '1309' }, { value: 1400, name: '1400' }]
+    echartsOption.series[3].data = [{ value: 1274, name: '1974' }, { value: 1400, name: '1600' }]
+    echartsOption.series[4].data = [{ value: null }, { value: null }, { value: 4300, name: '4300' }, { value: 5000, name: '5000' }]
     echartsOption.series[5].data = [{ value: 160, name: '' }, { value: 180, name: '6.7%' }]
   }, 0)
 })
