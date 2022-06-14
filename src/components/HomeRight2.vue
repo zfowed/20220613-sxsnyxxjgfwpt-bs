@@ -1,8 +1,6 @@
 <template>
-  <div class="home-side">
-    <div class="home-title pt-10px pl-30px">
-      <img src="@/assets/images/home-right2-title.png">
-    </div>
+  <div class="home-side ">
+    <img class="img" src="@/assets/images/tmp/p2.png">
   </div>
 </template>
 
@@ -14,5 +12,10 @@
 .home-side {
   height: 100%;
   background: rgba(14, 44, 94, 0.4);
+  padding: 0 40px;
+}
+
+.img {
+  width: 100%;
 }
 </style>
