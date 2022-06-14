@@ -320,7 +320,7 @@ onMounted(() => {
     echartsOption.series[2].data = [1309, 1400]
     echartsOption.series[3].data = [1274, 1400]
     echartsOption.series[4].data = [null, null, 4300, 5000]
-    echartsOption.series[5].data = [{ value: 160, name: '8%' }, { value: 180, name: '16.21%' }]
+    echartsOption.series[5].data = [{ value: 160, name: '' }, { value: 180, name: '6.7%' }]
   }, 0)
 })
 </script>
