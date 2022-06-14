@@ -64,7 +64,7 @@
         </div>
         <div class="flex-1">
           <div class="senior-text max-w-735px m-auto mb-10px">
-            支撑30+应用系统
+            支撑业务应用系统
           </div>
           <img class="max-w-735px h-430px m-auto" src="@/assets/images/middle-bottom-r.png" alt="">
         </div>
