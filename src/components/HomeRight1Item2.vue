@@ -264,7 +264,7 @@ onMounted(() => {
     echartsOption.xAxis.data = ['2020', '2021', '2022', '2023', '2024', '2025']
     echartsOption.series[0].data = [89.67, 88.17, 15, 20]
     echartsOption.series[1].data = [10.33, 11.83, 85, 80]
-    echartsOption.series[2].data = [{ value: 160, name: '8%' }, { value: 180, name: '16.21%' }]
+    echartsOption.series[2].data = [{ value: 160, name: '' }, { value: 180, name: '' }]
   }, 0)
 })
 
