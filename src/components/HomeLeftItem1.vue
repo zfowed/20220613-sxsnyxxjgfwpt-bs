@@ -24,7 +24,7 @@
     <div class="box-list">
       <div class="box-3 box-item mr-100px ">
         <div class="subtitle text-gradient">
-          3大国家平台数据整合接入
+          国家平台数据整合接入
         </div>
         <div class="content relative">
           <div class="img-item w-830px h-190px mb-10px" :style="{ backgroundImage: `url(${boxItemImg(5)})` }">
