@@ -82,7 +82,7 @@ const handleLoaded = () => {
       modules: [Pagination, EffectFade, Autoplay],
       // loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 10000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
