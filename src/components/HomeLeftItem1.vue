@@ -98,7 +98,7 @@
               <div class="text-cell">
                 <div class="desc flex w-160px text-cyan-gradient">
                   <div class="value">
-                    <TweenNumber :value="200" />
+                    <TweenNumber :value="180" />
                   </div>
                   <div class="label">
                     TB
@@ -111,7 +111,7 @@
               <div class="text-cell">
                 <div class="desc flex w-160px text-cyan-gradient">
                   <div class="value">
-                    <TweenNumber :value="200" />
+                    <TweenNumber :value="130" />
                   </div>
                   <div class="label">
                     TB
@@ -124,7 +124,7 @@
               <div class="text-cell">
                 <div class="desc flex w-160px text-cyan-gradient">
                   <div class="value">
-                    <TweenNumber :value="200" />
+                    <TweenNumber :value="220" />
                   </div>
                   <div class="label">
                     TB
@@ -137,7 +137,7 @@
               <div class="text-cell">
                 <div class="desc flex w-160px text-cyan-gradient">
                   <div class="value">
-                    <TweenNumber :value="200" />
+                    <TweenNumber :value="270" />
                   </div>
                   <div class="label">
                     TB
@@ -154,7 +154,7 @@
               <div class="text-cell">
                 <div class="desc flex w-160px text-cyan-gradient">
                   <div class="value">
-                    <TweenNumber :value="200" />
+                    <TweenNumber :value="170" />
                   </div>
                   <div class="label">
                     TB
@@ -182,7 +182,7 @@
               <div class="text-cell">
                 <div class="desc flex w-160px text-cyan-gradient">
                   <div class="value">
-                    <TweenNumber :value="200" />
+                    <TweenNumber :value="280" />
                   </div>
                   <div class="label">
                     TB
@@ -195,7 +195,7 @@
               <div class="text-cell ">
                 <div class="desc flex w-160px text-cyan-gradient">
                   <div class="value">
-                    <TweenNumber :value="200" />
+                    <TweenNumber :value="150" />
                   </div>
                   <div class="label">
                     TB
@@ -266,6 +266,7 @@ const boxItemImg = (index: string) =>
       .content {
         .img-item {
           background-size: 100%;
+          background-repeat: no-repeat;
           .left-img,
           .right-img {
             background-size: 100%;

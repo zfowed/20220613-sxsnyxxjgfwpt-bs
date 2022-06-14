@@ -2,13 +2,13 @@
   <div class="home-main">
     <div class="home-main-top">
       <div class="text-list">
-        <div class="text-item text-item-box1 w-354px h-64px">
+        <div class="text-item text-item-box1 w-524px h-64px">
           煤炭产、运、储、销数据； 安全生产数据；车辆运输数据
         </div>
-        <div class="text-item text-item-box2 w-136px h-64px">
+        <div class="text-item text-item-box2 w-206px h-64px">
           能源信息 数据及服务
         </div>
-        <div class="text-item text-item-box3 w-300px h-64px">
+        <div class="text-item text-item-box3 w-360px h-64px">
           汇聚存储本市企业数据, 基础计算及统计分析数据
         </div>
         <div class="text-item text-item-box4 w-300px h-28px">
@@ -38,7 +38,7 @@
             </div>
           </div>
         </div>
-        <div class="desc-info-explain pt-28px flex flex-row justify-around">
+        <div class="desc-info-explain pt-8px flex flex-row justify-around">
           <div class="explain-item text-gradient">
             数据采集方式
           </div>
@@ -345,28 +345,28 @@ onMounted(() => {
     left: 0;
     .text-list {
       .text-item {
-        font-size: 27px;
+        font-size: 40px;
         font-family: PingFang SC;
         font-weight: 400;
         font-style: italic;
         color: white;
-        line-height: 37px;
+        line-height: 1.4;
         position: absolute;
       }
       .text-item-box1 {
-        top: 126px;
+        top: 106px;
         left: 1202px;
       }
       .text-item-box2 {
-        top: 835px;
+        top: 795px;
         left: 1305px;
       }
       .text-item-box3 {
-        top: 1373px;
+        top: 1303px;
         left: 1379px;
       }
       .text-item-box4 {
-        top: 1700px;
+        top: 1650px;
         left: 1503px;
       }
     }
@@ -433,7 +433,7 @@ onMounted(() => {
         }
       }
       .desc-info-explain {
-        font-size: 20px;
+        font-size: 40px;
       }
     }
   }
