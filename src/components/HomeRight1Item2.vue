@@ -7,75 +7,97 @@
       <div class="sub-title mt-40px pl-50px text-40px mb-40px">
         <span>非化石能源发电量比重 </span>
       </div>
-      <div style="padding: 25px 55px">
+      <div style="padding: 25px 55px 12px">
         <div class="flex">
           <div class="item1 w-1/2 flex">
-            <div class="item1-aside year-btn flex justify-center">
-              <span>2020</span>
+            <div class="item1-aside flex justify-center">
+              <div class="year-btn layout-full" />
+              <span class="text-48px" style="position: absolute;">2020</span>
             </div>
             <div class="item1-section flex">
               <div class="w-1/2 text-center">
-                <div class="tips-color">
+                <div class="tips-color text-46px">
                   89.87%
-                </div><div>火力</div>
+                </div><div class="mt-15px text-38px mt-10px">
+                  火力
+                </div>
               </div>
               <div class="w-1/2 text-center">
-                <div class="tips-color">
+                <div class="tips-color text-46px">
                   6.37%
-                </div><div>风力</div>
+                </div><div class="mt-15px text-38px mt-10px">
+                  风力
+                </div>
               </div>
               <div class="w-1/2 text-center">
-                <div class="tips-color">
+                <div class="tips-color text-46px">
                   2.65%
-                </div><div>太阳能</div>
+                </div><div class="mt-15px text-38px mt-10px">
+                  太阳能
+                </div>
               </div>
               <div class="w-1/2 text-center">
-                <div class="tips-color">
+                <div class="tips-color text-46px">
                   1.31%
-                </div><div>水利</div>
+                </div><div class="mt-15px text-38px mt-10px">
+                  水利
+                </div>
               </div>
             </div>
           </div>
           <div class="item1 w-1/2 flex">
-            <div class="item1-aside year-btn flex justify-center">
-              <span>2021</span>
+            <div class="item1-aside flex justify-center">
+              <div class="year-btn layout-full" />
+              <span class="text-48px" style="position: absolute;">2021</span>
             </div>
             <div class="item1-section flex">
-              <div class="w-1/2 text-center">
+              <div class="w-1/2 text-center text-46px">
                 <div class="tips-color">
                   88.17%
-                </div><div>火力</div>
+                </div><div class="text-38px mt-10px">
+                  火力
+                </div>
               </div>
-              <div class="w-1/2 text-center">
+              <div class="w-1/2 text-center text-46px">
                 <div class="tips-color">
                   11.83%
-                </div><div>风力</div>
+                </div><div class="text-38px mt-10px">
+                  风力
+                </div>
               </div>
-              <div class="w-1/2 text-center">
+              <div class="w-1/2 text-center text-46px">
                 <div class="tips-color">
                   7.17%
-                </div><div>太阳能</div>
+                </div><div class="text-38px mt-10px">
+                  太阳能
+                </div>
               </div>
-              <div class="w-1/2 text-center">
+              <div class="w-1/2 text-center text-46px">
                 <div class="tips-color">
                   1.51%
-                </div><div>水利</div>
+                </div><div class="text-38px mt-10px">
+                  水利
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="item2 flex mt-20px mb-20px">
-          <div class="year-btn fotter-btn">
-            2022
+          <div class="fotter-btn text-48px">
+            <div class="year-btn layout-full" />
+            <span class="text-48px" style="position: relative; top: -100%;">2022</span>
           </div>
-          <div class="year-btn fotter-btn">
-            2023
+          <div class="fotter-btn text-48px">
+            <div class="year-btn layout-full" />
+            <span class="text-48px" style="position: relative; top: -100%;">2023</span>
           </div>
-          <div class="year-btn fotter-btn">
-            2024
+          <div class="fotter-btn text-48px">
+            <div class="year-btn layout-full" />
+            <span class="text-48px" style="position: relative; top: -100%;">2024</span>
           </div>
-          <div class="year-btn fotter-btn">
-            2025
+          <div class="fotter-btn text-48px">
+            <div class="year-btn layout-full" />
+            <span class="text-48px" style="position: relative; top: -100%;">2025</span>
           </div>
         </div>
       </div>
@@ -105,7 +127,7 @@ const echartsOption = reactive({
   },
   color: ['#0495ED', '#30D196'],
   grid: {
-    top: 65,
+    top: 100,
     right: 20,
     left: 100,
     bottom: 30,
@@ -115,9 +137,9 @@ const echartsOption = reactive({
     alignTicks: true,
     name: '单位：%',
     nameTextStyle: {
-      padding: [0, 0, 5, 0],
+      padding: [0, 0, 38, 0],
       color: 'rgba(255, 255, 255, 0.7)',
-      fontSize: 26,
+      fontSize: 38,
     },
     splitNumber: 5,
     axisLabel: {
@@ -170,14 +192,42 @@ const echartsOption = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
+      itemStyle: {
+        normal: {
+          label: {
+            show: true,
+            formatter(params: any) {
+              return `${params.value}`
+            },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
+          },
+        },
+      },
     },
     {
       name: '非化石能源',
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
+      itemStyle: {
+        normal: {
+          label: {
+            show: true,
+            formatter(params: any) {
+              return `${params.value}`
+            },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
+          },
+        },
+      },
     },
     {
       type: 'line',
@@ -230,6 +280,10 @@ onMounted(() => {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+.layout-full {
+  width: 100%;
+  height: 100%;
 }
 .item1-aside {
   width: 184px;

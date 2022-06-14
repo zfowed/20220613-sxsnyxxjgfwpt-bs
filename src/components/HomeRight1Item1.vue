@@ -7,7 +7,7 @@
       <div class="sub-title mt-38px pl-50px text-40px">
         <span>非化石能源发电装机容量占全省发电装机容量</span>
       </div>
-      <div class="progress-list flex flex-wrap mt-25px ml-50px pr-20px h-380px">
+      <div class="progress-list flex flex-wrap mt-25px mb-55px ml-50px pr-20px h-445px">
         <div
           v-for="(item, index) in progressList"
           :key="index"
@@ -24,17 +24,17 @@
             :show-text="false"
           />
           <div class="progress-label ml-15px">
-            <div class="font-bold text-40px">
+            <div class="font-bold text-48px">
               {{ item.nums }}
             </div>
-            <div class="text-24px mt-10px">
+            <div class="text-36px mt-18px">
               {{ item.year }}
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="box2 h-480px ml-40px mr-60px mt-40px">
+    <div class="box2 h-450px ml-40px mr-60px mt-40px">
       <VueEcharts :option="echartsOption" />
     </div>
   </div>
@@ -104,7 +104,7 @@ const echartsOption = reactive({
     name: '单位：万千瓦',
     nameTextStyle: {
       padding: [0, 0, 38, 0],
-      color: '#FFFFFF',
+      color: 'rgba(255, 255, 255, 0.7)',
       fontSize: 38,
     },
     splitNumber: 5,
@@ -163,44 +163,104 @@ const echartsOption = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
-    },
-    {
-      name: '水电',
-      type: 'bar',
-      stack: 'bar',
-      data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
-    },
-    {
-      name: '光电',
-      type: 'bar',
-      stack: 'bar',
-      data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
-    },
-    {
-      name: '风电',
-      type: 'bar',
-      stack: 'bar',
-      data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
-    },
-    {
-      name: '未来预测',
-      type: 'bar',
-      stack: 'bar',
-      data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
-          barBorderRadius: [50, 50, 0, 0],
           label: {
             show: true,
             position: 'top',
             formatter(params: any) {
               return `${params.value}`
             },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
+          },
+        },
+      },
+    },
+    {
+      name: '水电',
+      type: 'bar',
+      stack: 'bar',
+      data: [null, null, null, null, null, null] as any[],
+      barWidth: 100,
+      itemStyle: {
+        normal: {
+          label: {
+            show: true,
+            position: 'top',
+            formatter(params: any) {
+              return `${params.value}`
+            },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
+          },
+        },
+      },
+    },
+    {
+      name: '光电',
+      type: 'bar',
+      stack: 'bar',
+      data: [null, null, null, null, null, null] as any[],
+      barWidth: 100,
+      itemStyle: {
+        normal: {
+          label: {
+            show: true,
+            position: 'top',
+            formatter(params: any) {
+              return `${params.value}`
+            },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
+          },
+        },
+      },
+    },
+    {
+      name: '风电',
+      type: 'bar',
+      stack: 'bar',
+      data: [null, null, null, null, null, null] as any[],
+      barWidth: 100,
+      itemStyle: {
+        normal: {
+          label: {
+            show: true,
+            position: 'top',
+            formatter(params: any) {
+              return `${params.value}`
+            },
+            textStyle: {
+              fontSize: 26,
+              color: 'rgba(255, 255, 255, 0.7)',
+            },
+          },
+        },
+      },
+    },
+    {
+      name: '未来预测',
+      type: 'bar',
+      stack: 'bar',
+      data: [null, null, null, null, null, null] as any[],
+      barWidth: 100,
+      itemStyle: {
+        normal: {
+          barBorderRadius: [50, 50, 0, 0],
+          formatter(params: any) {
+            return `${params.value}`
+          },
+          label: {
+            show: true,
+            position: 'top',
             textStyle: {
               fontSize: 26,
               color: 'rgba(255, 255, 255, 0.7)',
@@ -255,10 +315,10 @@ const echartsOption = reactive({
 onMounted(() => {
   setTimeout(() => {
     echartsOption.xAxis.data = ['2020', '2021', '2022', '2023', '2024', '2025']
-    echartsOption.series[0].data = [64, 150]
-    echartsOption.series[1].data = [223, 800]
+    echartsOption.series[0].data = [450, 500]
+    echartsOption.series[1].data = [600, 700]
     echartsOption.series[2].data = [1309, 1400]
-    echartsOption.series[3].data = [1974, 1600]
+    echartsOption.series[3].data = [1274, 1400]
     echartsOption.series[4].data = [null, null, 4300, 5000]
     echartsOption.series[5].data = [{ value: 160, name: '8%' }, { value: 180, name: '16.21%' }]
   }, 0)

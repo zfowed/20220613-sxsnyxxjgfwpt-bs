@@ -22,12 +22,13 @@ const echartsOption = reactive({
     text: '储量',
     left: 'center',
     textStyle: {
-      color: '#fff',
-      fontSize: 26,
+      fontSize: 38,
+      fontWeight: 'normal',
+      color: '#ffffff',
     },
   },
   grid: {
-    top: 65,
+    top: 100,
     right: 20,
     left: 100,
     bottom: 30,
@@ -37,9 +38,9 @@ const echartsOption = reactive({
     alignTicks: true,
     name: '单位：亿立方米 ',
     nameTextStyle: {
-      padding: [0, 0, 5, 0],
+      padding: [0, 0, 38, 0],
       color: 'rgba(255, 255, 255, 0.7)',
-      fontSize: 26,
+      fontSize: 38,
     },
     splitNumber: 5,
     axisLabel: {
@@ -93,7 +94,7 @@ const echartsOption = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
@@ -129,7 +130,7 @@ const echartsOption = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
@@ -165,7 +166,7 @@ const echartsOption = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
@@ -187,9 +188,9 @@ const echartsOption = reactive({
             x2: 0,
             y2: 0,
             colorStops: [
-              { offset: 0, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 0.5, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 1, color: 'rgba(54, 255, 182, 1)' },
+              { offset: 0, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 0.5, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 1, color: 'rgba(54, 255, 182, 0.7)' },
             ],
             global: false, // 缺省为 false
           },
@@ -201,7 +202,7 @@ const echartsOption = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
@@ -223,9 +224,9 @@ const echartsOption = reactive({
             x2: 0,
             y2: 0,
             colorStops: [
-              { offset: 0, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 0.5, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 1, color: 'rgba(54, 255, 182, 1)' },
+              { offset: 0, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 0.5, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 1, color: 'rgba(54, 255, 182, 0.7)' },
             ],
             global: false, // 缺省为 false
           },
@@ -273,12 +274,13 @@ const echarts1Option = reactive({
     text: '产量',
     left: 'center',
     textStyle: {
-      color: '#fff',
-      fontSize: 26,
+      fontSize: 38,
+      fontWeight: 'normal',
+      color: '#ffffff',
     },
   },
   grid: {
-    top: 65,
+    top: 100,
     right: 20,
     left: 100,
     bottom: 30,
@@ -288,9 +290,9 @@ const echarts1Option = reactive({
     alignTicks: true,
     name: '单位：亿立方米 ',
     nameTextStyle: {
-      padding: [0, 0, 5, 0],
+      padding: [0, 0, 38, 0],
       color: 'rgba(255, 255, 255, 0.7)',
-      fontSize: 26,
+      fontSize: 38,
     },
     splitNumber: 5,
     axisLabel: {
@@ -313,6 +315,7 @@ const echarts1Option = reactive({
     alignTicks: true,
     show: false,
   }],
+  color: ['#dab21d', '#9f32f3', '#39cb97', '#0394e8'],
   xAxis: {
     type: 'category',
     nameLocation: 'middle',
@@ -343,7 +346,7 @@ const echarts1Option = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
@@ -379,7 +382,7 @@ const echarts1Option = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
@@ -415,7 +418,7 @@ const echarts1Option = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
@@ -437,9 +440,9 @@ const echarts1Option = reactive({
             x2: 0,
             y2: 0,
             colorStops: [
-              { offset: 0, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 0.5, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 1, color: 'rgba(54, 255, 182, 1)' },
+              { offset: 0, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 0.5, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 1, color: 'rgba(54, 255, 182, 0.7)' },
             ],
             global: false, // 缺省为 false
           },
@@ -451,7 +454,7 @@ const echarts1Option = reactive({
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
-      barWidth: 70,
+      barWidth: 100,
       itemStyle: {
         normal: {
           barBorderRadius: [50, 50, 0, 0],
@@ -473,9 +476,9 @@ const echarts1Option = reactive({
             x2: 0,
             y2: 0,
             colorStops: [
-              { offset: 0, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 0.5, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 1, color: 'rgba(54, 255, 182, 1)' },
+              { offset: 0, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 0.5, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 1, color: 'rgba(54, 255, 182, 0.7)' },
             ],
             global: false, // 缺省为 false
           },
