@@ -1,7 +1,7 @@
 <template>
   <div class="home-side">
-    <div class="home-title pt-10px pl-30px">
-      <img src="@/assets/images/home-right1-title.png">
+    <div class="home-title pt-10px pl-30px mb-10px">
+      <img class="w-2060px h-134px" src="@/assets/images/home-right1-title.png">
     </div>
     <div class="flex">
       <div class="w-1/2">

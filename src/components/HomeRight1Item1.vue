@@ -4,7 +4,7 @@
       <div class="title mt-15px pl-50px text-48px">
         <span class="text-gradient">为“扩大非化石能源装机规模”举措提供数据支撑</span>
       </div>
-      <div class="sub-title mt-40px pl-50px text-48px">
+      <div class="sub-title mt-38px pl-50px text-40px">
         <span>非化石能源发电装机容量占全省发电装机容量</span>
       </div>
       <div class="progress-list flex flex-wrap mt-25px ml-50px pr-20px h-380px">
@@ -19,7 +19,7 @@
             type="circle"
             :color="item.color ? item.color : 'rgba(36, 252, 255, 0.3)'"
             :width="105"
-            :stroke-width="9"
+            :stroke-width="12"
             :percentage="item.progressNum"
             :show-text="false"
           />
@@ -93,31 +93,33 @@ const echartsOption = reactive({
     data: ['风电', '光电', '水电', '生物'],
   },
   grid: {
-    top: 65,
-    right: 20,
-    left: 100,
-    bottom: 30,
+    top: 100,
+    right: 40,
+    left: 140,
+    bottom: 60,
   },
   yAxis: [{
     type: 'value',
     alignTicks: true,
     name: '单位：万千瓦',
     nameTextStyle: {
-      padding: [0, 0, 5, 0],
-      color: 'rgba(255, 255, 255, 0.7)',
-      fontSize: 26,
+      padding: [0, 0, 38, 0],
+      color: '#FFFFFF',
+      fontSize: 38,
     },
     splitNumber: 5,
     axisLabel: {
+      margin: 20,
       textStyle: {
         fontSize: 26,
-        color: 'rgba(255, 255, 255, 0.7)',
+        color: '#B5CEE3',
       },
     },
     axisLine: {
       show: true,
       lineStyle: {
         color: '#0A63B4',
+        width: 2,
       },
     },
     splitLine: { show: false },
@@ -134,18 +136,20 @@ const echartsOption = reactive({
     axisLabel: {
       interval: 0,
       rotate: 0,
+      margin: 20,
       formatter(value: string) {
         return value.split(' ').join('\n')
       },
       textStyle: {
         fontSize: 26,
-        color: 'rgba(255, 255, 255, 0.7)',
+        color: '#B5CEE3',
       },
     },
     axisLine: {
       show: true,
       lineStyle: {
         color: '#0A63B4',
+        width: 2,
       },
     },
     splitLine: { show: false },
@@ -183,7 +187,7 @@ const echartsOption = reactive({
       barWidth: 70,
     },
     {
-      name: '风电2',
+      name: '未来预测',
       type: 'bar',
       stack: 'bar',
       data: [null, null, null, null, null, null] as any[],
@@ -209,9 +213,9 @@ const echartsOption = reactive({
             x2: 0,
             y2: 0,
             colorStops: [
-              { offset: 0, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 0.5, color: 'rgba(13, 134, 101, 1)' },
-              { offset: 1, color: 'rgba(54, 255, 182, 1)' },
+              { offset: 0, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 0.5, color: 'rgba(13, 134, 101, 0.7)' },
+              { offset: 1, color: 'rgba(54, 255, 182, 0.7)' },
             ],
             global: false, // 缺省为 false
           },
@@ -242,6 +246,10 @@ const echartsOption = reactive({
   ],
   tooltip: {
     trigger: 'axis',
+    padding: 20,
+    textStyle: {
+      fontSize: 26,
+    },
   },
 })
 onMounted(() => {

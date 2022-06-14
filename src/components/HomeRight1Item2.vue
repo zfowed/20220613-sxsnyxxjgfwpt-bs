@@ -4,7 +4,7 @@
       <div class="title mt-15px pl-50px text-48px">
         <span class="text-gradient">为“扩大非化石能源发电量占比”举措提供数据支撑</span>
       </div>
-      <div class="sub-title mt-40px pl-50px text-48px mb-40px">
+      <div class="sub-title mt-40px pl-50px text-40px mb-40px">
         <span>非化石能源发电量比重 </span>
       </div>
       <div style="padding: 25px 55px">
@@ -203,6 +203,10 @@ const echartsOption = reactive({
   ],
   tooltip: {
     trigger: 'axis',
+    padding: 20,
+    textStyle: {
+      fontSize: 26,
+    },
   },
 })
 onMounted(() => {
@@ -228,7 +232,7 @@ onMounted(() => {
   }
 }
 .item1-aside {
-  width: 120px;
+  width: 184px;
   height: 245px;
   align-items: center
 }
@@ -237,21 +241,29 @@ onMounted(() => {
   flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 }
 .tips-color {
   color: #5AFFE4;
 }
 .fotter-btn {
-  height: 60px;
-  line-height: 60px;
+  width: 270px;
+  height: 94px;
+  line-height: 94px;
   text-align: center;
-  width: 25%;
 }
+
+.item2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .year-btn {
   background: linear-gradient(180deg, rgba(0, 204, 255, 0.5), rgba(4, 23, 50, 0));
-  border: 1px solid;
+  border: 2px solid;
   border-image: linear-gradient(180deg, rgba(136, 239, 253, 0.65), rgba(16, 247, 255, 0.65)) 1 1;
   opacity: 0.5;
-  border-radius: 2px;
+  border-radius: 6px;
 }
 </style>

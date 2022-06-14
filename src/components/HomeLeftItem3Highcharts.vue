@@ -121,6 +121,16 @@ const initOption = () => {
         alpha: 65,
       },
     },
+    tooltip: {
+      padding: 20,
+      formatter(tooltip) {
+        return tooltip.defaultFormatter.call(this, tooltip)
+      },
+      headerFormat: '',
+      style: {
+        fontSize: '26px',
+      },
+    },
     legend: {
       enabled: false, // 关闭图例
     },

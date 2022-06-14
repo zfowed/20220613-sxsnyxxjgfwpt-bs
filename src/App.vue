@@ -83,7 +83,7 @@ html, body {
 
 img {
   pointer-events: none;
-  user-select: none;
+  user-select: none !important;
   image-rendering: -webkit-optimize-contrast;
 }
 </style>

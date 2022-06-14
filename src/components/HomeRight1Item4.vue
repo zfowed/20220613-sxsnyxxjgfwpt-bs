@@ -311,6 +311,10 @@ const echartsOption = reactive({
   ],
   tooltip: {
     trigger: 'axis',
+    padding: 20,
+    textStyle: {
+      fontSize: 26,
+    },
   },
 })
 onMounted(() => {
