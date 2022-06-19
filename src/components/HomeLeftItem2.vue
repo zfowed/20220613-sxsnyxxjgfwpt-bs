@@ -1,7 +1,7 @@
 <template>
   <div class="px-60px mb-60px">
     <div class="senior-text text-48px font-medium mb-30px">
-      企业数据采集
+      企业数据采集（按能源类型）
     </div>
     <div class="flex">
       <div class="flex-1 h-564px">
